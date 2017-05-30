@@ -12,7 +12,7 @@ ENV BUILD_VERSION b13
 
 WORKDIR /tmp
 
-ADD download_jre.sh /
+ADD download_jre.sh /root
 
 RUN chmod +x /root/*.sh \
           && /root/download_jre.sh \ 
