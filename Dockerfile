@@ -12,10 +12,11 @@ ENV BUILD_VERSION b13
 
 WORKDIR /tmp
 
-ADD download_jre.sh /root
+ADD download-jre.sh /root
 
 RUN chmod +x /root/*.sh \
-          && /root/download_jre.sh \ 
+          && /root/download-jre.sh \
+	  && rm -f /root/download-jre.sh \
           && tar xzf server-jre-8u121-linux-x64.tar.gz \
           && mkdir -p /opt/java \
           && mv jdk1.8.0_121 /opt/java \
