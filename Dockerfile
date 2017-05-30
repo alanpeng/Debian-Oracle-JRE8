@@ -14,7 +14,7 @@ WORKDIR /tmp
 
 RUN apt-get update \
           && apt-get install -y wget \
-          && wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VERSION-$BUILD_VERSION/server-jre-$JAVA_VERSION-linux-x64.tar.gz" -O server-jre-8-linux-x64.tar.gz \ 
+          && wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/server-jre-8u121-linux-x64.tar.gz" -O server-jre-8-linux-x64.tar.gz \ 
           && tar xzf server-jre-8-linux-x64.tar.gz \
           && mkdir -p /opt/java \
           && mv jdk1.8.0_121 /opt/java \
